@@ -2,8 +2,11 @@ package com.example;
 
 import javax.swing.text.html.parser.Entity;
 
+import com.example.model.Cliente;
 import com.example.model.Veiculo;
+import com.example.repository.Clientes;
 import com.example.repository.Veiculos;
+import com.mysql.cj.xdevapi.Client;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
@@ -13,7 +16,7 @@ import jakarta.persistence.Persistence;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
-        Veiculo v = new Veiculo();
+        /*Veiculo v = new Veiculo();
         v.setCodigo(4L);
         v.setFabricante("BMW");
         v.setModelo("X2");
@@ -28,7 +31,17 @@ public class Main {
         Veiculo veiculo = veiculos.porId(1L);
         veiculos.excluir(veiculo);
 
-        veiculos.listarTodos();
+        veiculos.listarTodos(); */
+
+        Cliente c = new Cliente();
+        c.setNome("Leonardo");
+        c.setCpf("33344455566");
+        c.setTelefone("77999998888");
+        c.setEndereco("leonardo@mail.com");
+        c.setEndereco("Rua A");
+
+        Clientes clientes = new Clientes();
+        clientes.adicionar(c);
 
 
         //EntityManagerFactory entityManagerFactory = Persistence.

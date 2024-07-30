@@ -4,10 +4,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-@Entity
-@Table(name = "veiculo")
+@Entity  // Mapeia a classe que representara uma tabela no banco de dados, ou seja, informar que essa classe tratasse de uma entidade no banco de dados
+@Table(name = "veiculo")  //renomeia a tabela criada no banco de dadosS
 public class Veiculo {
-    @Id
+    @Id  //diz que os dados dessa coluna serão os ids (chaves primárias no banco)
     private Long codigo;
     private String fabricante;
     private String modelo;
